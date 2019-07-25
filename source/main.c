@@ -50,7 +50,7 @@ int main(void)
 {
     DDRA = 0x00; PORTA = 0xFF;
     DDRD = 0xFF; PORTD = 0x00;
-//    DDRC = 0xFF; PORTC = 0x00;
+    DDRC = 0xFF; PORTC = 0x00;
 
     shiftInit();
     LCD_Init();
@@ -76,7 +76,7 @@ int main(void)
     playerShoot.TickFct = &playerShootTick;
     
     updateShots.state = UPDATE_SHOTS;
-    updateShots.period = 100;
+    updateShots.period = 50;
     updateShots.elapsedTime = updateShots.period;
     updateShots.TickFct = &updateShotsTick;
     

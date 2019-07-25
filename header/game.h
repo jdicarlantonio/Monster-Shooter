@@ -79,7 +79,8 @@ int gameTick(int state)
                 highScore = eeprom_read_byte((const uint8_t*)EEPROM_SCORE_LOC);
             }
 
-            LCD_DisplayString(1, "Monster Shooter   Press Start");
+            LCD_ClearScreen();
+            LCD_DisplayString(2, "Monster Hunter   Press Start");
             state = MENU; 
             break;
         }
@@ -95,7 +96,7 @@ int gameTick(int state)
                 state = SCROLL; 
             }
 
-            if(tmpObstacle[0] == MONSTER && !ducking)
+            if((tmpObstacle[0] == MONSTER && !ducking))
             {
                 LCD_ClearScreen();
                 LCD_DisplayString(1, "Game Over");
@@ -113,7 +114,7 @@ int gameTick(int state)
                 }
                 state = GAME_OVER; 
             }
-            
+
             break;
         }
         case MENU:

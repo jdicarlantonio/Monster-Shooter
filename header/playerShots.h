@@ -18,6 +18,7 @@ unsigned char potentialHit; // keep track of actual hits
 enum PlayerShootStates
 {
     WAIT_SHOT,
+    SHOT_HELD,
     PLAYER_SHOT
 };
 
@@ -36,7 +37,7 @@ int playerShootTick(int state)
                 }
                 else
                 {
-                    state = PLAYER_SHOT;
+                    state = SHOT_HELD;
                 }
             }
             else
@@ -46,7 +47,28 @@ int playerShootTick(int state)
 
             break;
         }
-        case PLAYER_SHOT: state = shoot ? PLAYER_SHOT : WAIT_SHOT; break;
+        case SHOT_HELD:
+        {
+            if(shoot) 
+            {
+                state = SHOT_HELD; 
+            }
+            else
+            {
+                state = PLAYER_SHOT; 
+            }
+
+            break;
+        }
+        case PLAYER_SHOT:
+        {
+//            shot = 1; 
+//            potentialHit = 1; 
+//            state = WAIT_SHOT;
+            state = shoot ? PLAYER_SHOT : WAIT_SHOT; 
+            
+            break;
+        }
     }
 
     // actions
