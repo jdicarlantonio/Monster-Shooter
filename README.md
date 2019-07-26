@@ -15,6 +15,9 @@ There are four different tasks used in this project with their implementations d
 ## State Machines
 
 ![alt text](https://github.com/jdicarlantonio/CS120B_Project/blob/master/design/gametask.jpg)
+
 ![alt text](https://github.com/jdicarlantonio/CS120B_Project/blob/master/design/playermove.jpg)
+
 ![alt text](https://github.com/jdicarlantonio/CS120B_Project/blob/master/design/playershoot.jpg)
+
 ![alt text](https://github.com/jdicarlantonio/CS120B_Project/blob/master/design/updateshots.jpg)
