@@ -1,4 +1,4 @@
-# CS/EE 120B Final Project -- Monster Hunter
+# Monster Shooter
 
 ## Tasks
 There are four different tasks used in this project with their implementations defined in the header directory:
