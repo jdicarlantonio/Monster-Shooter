@@ -80,7 +80,7 @@ int gameTick(int state)
             }
 
             LCD_ClearScreen();
-            LCD_DisplayString(2, "Monster Hunter   Press Start");
+            LCD_DisplayString(2, "Monster Shooter  Press Start");
             state = MENU; 
             break;
         }
